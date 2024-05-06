@@ -9,7 +9,7 @@ candy::candy(candy* upperNeighbour, Vector2f location, float scale) {
 	if (scale > 1 && location.x == 0) return; //commit 7
 	if (upperNeighbour != NULL) upperNeighbour->setLowerNeighbour(this);
 	type = rand() % 8;
-
+	int toChange = 99; //commit 10
 	newCreatedSprite.setTexture(texture); //commit 6
 	newCreatedSprite.setTextureRect(IntRect(this->type * baseSpriteSize, 0, baseSpriteSize, baseSpriteSize)); //commit 6
 	sprite.setOrigin(baseSpriteSize / 2, baseSpriteSize / 2);
