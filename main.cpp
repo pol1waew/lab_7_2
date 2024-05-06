@@ -24,8 +24,8 @@ void candy::onCollapse() {
 		lowerNeighbour->setUpperNeighbour(this);
 		upperNeighbour = NULL;
 	}
-	sprite.setScale(baseScale, baseScale);
-	setState(candyState::fixed);
+	sprite.setScale(0.1, 0.1); //commit 5
+	setState(candyState::moved); //commit 5
 	location.y = -getScaledSpriteSize();
 	type = rand() % 8;
 	sprite.setTextureRect(IntRect(this->type * baseSpriteSize, 0, baseSpriteSize, baseSpriteSize));
@@ -75,7 +75,7 @@ void candy::setState(candyState state) {
 	if (this->state == candyState::fixed) {
 		sprite.setTextureRect(IntRect(this->type * baseSpriteSize, 0, baseSpriteSize, baseSpriteSize));
 		sprite.setRotation(0);
-		isRightRotating = true;
+		isleftRotating = false; //commit 5
 	}
 	else if (this->state == candyState::shaking) {
 		sprite.setTextureRect(IntRect(this->type * baseSpriteSize, 32, baseSpriteSize, baseSpriteSize));
