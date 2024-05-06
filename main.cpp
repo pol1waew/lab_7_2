@@ -66,7 +66,7 @@ candy* candy::getTopCandy() {
 	else						return upperNeighbour->getTopCandy();
 }
 
-void candy::setLowerNeighbour(candy* neighbour) { lowerNeighbour = neighbour; }
+void candy::setLowerNeighbour(candy* neighbour) { neighbour = lowerNeighbour; } //commit 4
 
 void candy::setUpperNeighbour(candy* neighbour) { upperNeighbour = neighbour; }
 
