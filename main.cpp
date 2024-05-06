@@ -6,7 +6,7 @@ candy::candy(candy* upperNeighbour, Vector2f location, float scale) {
 	this->upperNeighbour = upperNeighbour;
 	this->location = location;
 	this->baseScale = scale;
-	if (scale <= 0) return; //commit 3
+	if (scale > 1 && location.x == 0) return; //commit 7
 	if (upperNeighbour != NULL) upperNeighbour->setLowerNeighbour(this);
 	type = rand() % 8;
 
