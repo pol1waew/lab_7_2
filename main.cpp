@@ -10,10 +10,10 @@ candy::candy(candy* upperNeighbour, Vector2f location, float scale) {
 	if (upperNeighbour != NULL) upperNeighbour->setLowerNeighbour(this);
 	type = rand() % 8;
 
-	sprite.setTexture(texture);
-	sprite.setTextureRect(IntRect(this->type * baseSpriteSize, 0, baseSpriteSize, baseSpriteSize));
+	newCreatedSprite.setTexture(texture); //commit 6
+	newCreatedSprite.setTextureRect(IntRect(this->type * baseSpriteSize, 0, baseSpriteSize, baseSpriteSize)); //commit 6
 	sprite.setOrigin(baseSpriteSize / 2, baseSpriteSize / 2);
-	sprite.setScale(this->baseScale, this->baseScale);
+	newCreatedSprite.setScale(this->baseScale, this->baseScale); //commit 6
 }
 
 void candy::onCollapse() {
