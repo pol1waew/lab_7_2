@@ -48,7 +48,7 @@ void candy::onTick(float tick, unsigned short int bottomBorder) {
 }
 
 void candy::loadTexture() {
-	texture.loadFromFile("resources/candySpriteList.png"); // commit 1
+	texture.loadFromFile("/sprites/gameImages/candySpriteList.jpg"); // commit 2
 }
 
 void candy::draw(RenderWindow* window) {
