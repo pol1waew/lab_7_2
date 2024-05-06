@@ -25,7 +25,7 @@ void candy::onCollapse() {
 		upperNeighbour = NULL;
 	}
 	sprite.setScale(0.1, 0.1); //commit 5
-	setState(candyState::moved); //commit 5
+	state = candyState::moved; //commit 9
 	location.y = -getScaledSpriteSize();
 	type = rand() % 8;
 	sprite.setTextureRect(IntRect(this->type * baseSpriteSize, 0, baseSpriteSize, baseSpriteSize));
