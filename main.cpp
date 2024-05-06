@@ -53,7 +53,7 @@ void candy::loadTexture() {
 
 void candy::draw(RenderWindow* window) {
 	sprite.setPosition(location.x + (baseSpriteSize / 2) * baseScale, location.y + (baseSpriteSize / 2) * baseScale);
-
+	// Draw sprite after all      //commit 8
 	window->draw(sprite);
 }
 
